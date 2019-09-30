@@ -1,0 +1,67 @@
+
+
+#header-img {
+  height: 100%;
+  width: 15%;
+}
+header {
+  height: 15%;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background: linear-gradient(to right, white, lightgreen);
+  justify-content: space-between;
+
+}
+
+main {
+  margin-top: 10%;
+  background: linear-gradient(to right, white, lightblue);
+}
+.section2 {
+  /* position: center; */
+}
+
+img {
+  height: 250px;
+  width: 250px;
+}
+
+#vid-gallery {
+  display: flex;
+  background: linear-gradient(to right, white, lightgreen);
+  padding: 20px 0 20px 0;
+}
+
+.video {
+  width: 48%;
+  margin: 0 auto;
+}
+
+/* copied video response https://www.ostraining.com/blog/coding/responsive-videos/ */
+
+.video-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+
+.video-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+.stock-comparison {
+  display: flex;
+  justify-content: space-between;
+  height: 500px;
+  width: 100%;
+
+}
+
