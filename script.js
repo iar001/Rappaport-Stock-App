@@ -15,6 +15,17 @@ const compareInput = document.querySelector("#blank3")
 let compareResult = document.querySelector(".comparison")
 
 const buttonRandom = document.querySelector("#search4");
+const clearButton = document.querySelector("#search5");
+
+clearButton.addEventListener("click", async () => {
+  let stockOneInfo = document.querySelector("body > main > div.stock-comparison > section.stock-info > div.stock-info");
+  stockOneInfo.innerHTML = "";
+  let stockTwoInfo = document.querySelector("body > main > div.stock-comparison > section.stock-info2 > div.stock-info2");
+  stockTwoInfo.innerHTML = "";
+  let comparisonInfo = document.querySelector("body > main > div.stock-comparison > section.comparison");
+  comparisonInfo.innerHTML = `<h2>Comparison</h2>`
+  
+});
 
 const randomStock = (array) => {
   let randomNumber = Math.floor(Math.random() * array.length);
@@ -67,12 +78,13 @@ const renderstock1 = (information) => {
   element.classList.add("stock-info");
   element.innerHTML =
     `<p> ${information.data.companyName}</p>
+    <p>${information.data.symbol}</p>
     <p> ${information.data.previousClose}</p>
     <p>${information.data.ytdChange} %</p>
     <p>${information.data.peRatio}</p>
     <p>${information.data.marketCap}</p>
     <p>${information.data.changePercent}</p>
-    <p>${information.data.symbol}</p>
+    
     
 
     `
@@ -85,12 +97,13 @@ const renderstock2 = (information) => {
   element.classList.add("stock-info2");
   element.innerHTML =
     `<p> ${information.data.companyName}</p>
+    <p>${information.data.symbol}</p>
     <p>${information.data.previousClose}</p>
     <p>${information.data.ytdChange} %</p>
     <p>${information.data.peRatio}</p>
     <p>${information.data.marketCap}</p>
     <p>${information.data.changePercent}</p>
-    <p>${information.data.symbol}</p>
+    
     `
   stockResult2.append(element)
 }
@@ -115,6 +128,7 @@ const compareStocks = (stock1, stock2) => {
     element.classList.add("comparison");
     element.innerHTML = `
     <p>Names of the Companies</p>
+    <p>Stock Symbol</p>
     <p>Price Winner: ${stock1.data.symbol}</p>`
     compareResult.append(element)
   } else {
