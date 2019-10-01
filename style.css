@@ -34,6 +34,14 @@ img {
   width: 250px;
 }
 
+.stock-info {
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+.stock-info2 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 #vid-gallery {
   display: flex;
   background: linear-gradient(to right, white, lightgreen);
