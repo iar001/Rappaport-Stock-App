@@ -16,6 +16,9 @@ header {
 
 }
 
+body {
+  margin: 0;
+}
 .work-title {
   
 }
@@ -34,8 +37,16 @@ img {
   width: 250px;
 }
 
+#wizard:hover {
+ /* font-family: cursive;
+ overflow: auto; */
+ text-shadow:1px 0px #555;
+
+}
+
 .stock-info {
  font-family: Arial, Helvetica, sans-serif;
+ 
 }
 
 .stock-info2 {
@@ -73,8 +84,27 @@ img {
 .stock-comparison {
   display: flex;
   justify-content: space-between;
-  height: 500px;
-  width: 100%;
+  height: 350px;
+  /* width: 100%; */
+  border: 5px double #1C6EA4;
 
 }
 
+footer {
+  width: 100%;
+  padding-top: 10px;
+  background: linear-gradient(to right, white, lightblue);
+}
+
+#contact {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+small {
+  text-align: center;
+  display: block;
+  background-color: #000033;
+  color: white;
+  padding: 10px 0 10px 0;
+}
