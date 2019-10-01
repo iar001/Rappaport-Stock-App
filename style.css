@@ -16,12 +16,17 @@ header {
 
 }
 
+.work-title {
+  
+}
+
 main {
   margin-top: 10%;
   background: linear-gradient(to right, white, lightblue);
 }
 .section2 {
-  /* position: center; */
+  display: flex;
+  justify-content: space-between;
 }
 
 img {
