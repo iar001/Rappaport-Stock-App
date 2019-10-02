@@ -55,10 +55,12 @@ buttonRandom.addEventListener("click", async () => {
   let response2 = await axios.get(`https://cloud.iexapis.com/stable/stock/${randomStockTwo}/quote?token=${apikey}`);
   let logo1 = await axios.get(`https://cloud.iexapis.com/stable/stock/${randomStockOne}/logo?token=${apikey}`);
   let logo2 = await axios.get(`https://cloud.iexapis.com/stable/stock/${randomStockTwo}/logo?token=${apikey}`);
+  let company1 = await axios.get(`https://cloud.iexapis.com/stable/stock/${randomStockOne}/company?token=${apikey}`);
+  let company2 = await axios.get(`https://cloud.iexapis.com/stable/stock/${randomStockTwo}/company?token=${apikey}`);
   console.log(response1)
   console.log(randomStockOne)
-  renderstock1(response1,logo1)
-  renderstock2(response2,logo2)
+  renderstock1(response1, logo1, company1)
+  renderstock2(response2, logo2, company2)
   compareStocks(response1, response2)
 })
 
@@ -77,35 +79,40 @@ button1.addEventListener("click", async () => {
   let stockInfo = stockInput1.value;
   let response = await axios.get(`https://cloud.iexapis.com/stable/stock/${stockInfo}/quote?token=${apikey}`);
   let logo = await axios.get(`https://cloud.iexapis.com/stable/stock/${stockInfo}/logo?token=${apikey}`);
+  let company = await axios.get(`https://cloud.iexapis.com/stable/stock/${stockInfo}/company?token=${apikey}`)
+  console.log(company)
   console.log(logo);
   console.log(response);
-  renderstock1(response,logo);
+  renderstock1(response, logo, company);
 })
 
 button2.addEventListener("click", async () => {
   let stockInfo = stockInput2.value;
   let response = await axios.get(`https://cloud.iexapis.com/stable/stock/${stockInfo}/quote?token=${apikey}`);
-  let logo = await axios.get(`https://cloud.iexapis.com/stable/stock/${stockInfo}/logo?token=${apikey}`)
+  let logo = await axios.get(`https://cloud.iexapis.com/stable/stock/${stockInfo}/logo?token=${apikey}`);
+  let company = await axios.get(`https://cloud.iexapis.com/stable/stock/${stockInfo}/company?token=${apikey}`)
   console.log(response);
   console.log(response.data.symbol)
-  renderstock2(response,logo)
+  renderstock2(response, logo, company)
 })
 
 // https://sandbox.iexapis.com/stable/stock/AAPL/company?token=Tpk_877363aca2ec4c8894febb553930ff55
 
 
-const renderstock1 = (information,picture) => {
+const renderstock1 = (information, picture, company) => {
   let element = document.createElement("div");
   element.classList.add("stock-info");
   element.innerHTML =
     `<p> ${information.data.companyName}</p>
     <p>${information.data.symbol}</p>
-    <p> ${information.data.previousClose}</p>
-    <p>${information.data.ytdChange.toFixed(2)}%</p>
-    <p>${information.data.peRatio}</p>
-    <p>$${information.data.marketCap/1000000000} billion</p>
-    <p>${information.data.changePercent*100}%</p>
+    <p>Price: ${information.data.previousClose}</p>
+    <p>Year to Date Move: ${information.data.ytdChange.toFixed(2)}%</p>
+    <p>PE Ratio: ${information.data.peRatio}</p>
+    <p>Market Cap: $${information.data.marketCap / 1000000000} billion</p>
+    <p>Yesterday's Change: ${information.data.changePercent * 100}%</p>
     <img src=${picture.data.url} style="width:50px;height:50px" alt="hello">
+    <br>
+    <a href="${company.data.website}" target="_blank">Company Website</a>
     
     
 
@@ -113,19 +120,21 @@ const renderstock1 = (information,picture) => {
   stockResult1.append(element)
 }
 
-const renderstock2 = (information,picture) => {
+const renderstock2 = (information, picture, company) => {
   // let peRatio2 = information.data.peRatio;
   let element = document.createElement("div");
   element.classList.add("stock-info2");
   element.innerHTML =
     `<p> ${information.data.companyName}</p>
     <p>${information.data.symbol}</p>
-    <p>${information.data.previousClose}</p>
-    <p>${information.data.ytdChange.toFixed(2)}%</p>
-    <p>${information.data.peRatio}</p>
-    <p>$${information.data.marketCap/1000000000} billion</p>
-    <p>${information.data.changePercent*100}%</p>
+    <p>Price: ${information.data.previousClose}</p>
+    <p>Year to Date Move: ${information.data.ytdChange.toFixed(2)}%</p>
+    <p>PE Ratio: ${information.data.peRatio}</p>
+    <p>Market Cap: $${information.data.marketCap / 1000000000} billion</p>
+    <p>Yesterday's Change: ${information.data.changePercent * 100}%</p>
     <img src=${picture.data.url} style="width:50px;height:50px" alt="hello">
+    <br>
+    <a href="${company.data.website}" target="_blank">Company Website</a>
     
     `
   stockResult2.append(element)
@@ -316,6 +325,7 @@ buttonPrice.addEventListener("click", async () => {
   let stockInfo = sp500[randomNumber]
   let response = await axios.get(`https://cloud.iexapis.com/stable/stock/${stockInfo}/quote?token=${apikey}`);
   let logo = await axios.get(`https://cloud.iexapis.com/stable/stock/${stockInfo}/logo?token=${apikey}`);
+  let company = await axios.get(`https://cloud.iexapis.com/stable/stock/${stockInfo}/company?token=${apikey}`)
   // console.log(randomNumber)
   // console.log(stockInfo)
   // console.log(response)
@@ -323,29 +333,34 @@ buttonPrice.addEventListener("click", async () => {
   let pricer = Number(priceInput.value);
 
   if (response.data.peRatio < pricer && response.data.peRatio > 0) {
-    renderstock3(response,logo)
+    renderstock3(response, logo, company)
   } else {
-    console.log("try again!")
+    let element = document.createElement("div");
+    element.classList.add("stock-result");
+    element.innerHTML = "<p>TRY AGAIN</p>"
+    userInput.append(element)
   }
 
 
-//   sp500.forEach( async (company) => {
-//       let response1 = await axios.get(`https://cloud.iexapis.com/stable/stock/${company}/quote?token=${apikey}`)
-    // if (response1.data.peRatio < pricer && response1.data.peRatio > 0) {
-    //   return company
-    // } 
-// })   
+  //   sp500.forEach( async (company) => {
+  //       let response1 = await axios.get(`https://cloud.iexapis.com/stable/stock/${company}/quote?token=${apikey}`)
+  // if (response1.data.peRatio < pricer && response1.data.peRatio > 0) {
+  //   return company
+  // } 
+  // })   
 
 })
 
 
-const renderstock3 = (information,picture) => {
+const renderstock3 = (information, picture, company) => {
   let element = document.createElement("div");
   element.classList.add("stock-result");
   element.innerHTML =
     `<p> ${information.data.companyName}</p>
-    <p>${information.data.symbol}</p>
     <img src=${picture.data.url} style="width:50px;height:50px" alt="hello">
+    <br>
+    <a href="${company.data.website}" target="_blank">Company Website</a>
     `
   userInput.append(element)
 }
+

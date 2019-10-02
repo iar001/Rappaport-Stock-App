@@ -53,6 +53,11 @@ img {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.stock-result {
+  display: ;
+  
+}
+
 #vid-gallery {
   display: flex;
   background: linear-gradient(to right, white, lightgreen);
