@@ -260,59 +260,65 @@ let sp500 = ['ABT', 'ABBV', 'ACN', 'ADBE', 'ADT', 'AAP', 'AES', 'AFL', 'AMG', 'A
 
 // MODALS
 
-const leftPicModal = document.querySelector("#left-modal");
-const middlePicModal = document.querySelector("#middle-modal")
-const rightPicModal = document.querySelector("#right-modal");
+// const leftPicModal = document.querySelector("#left-modal");
+// const middlePicModal = document.querySelector("#middle-modal")
+// const rightPicModal = document.querySelector("#right-modal");
 
 
-leftPicModal.addEventListener("mouseenter", async () => {
-  
-  if (leftPicModal.style.display === "") {
-    leftPicModal.src = "";
-    leftPicModal.innerHTML = "HELLO"
-  }
-})
+// leftPicModal.addEventListener("mouseenter", async () => {
+//   console.log(leftPicModal.style.display)
+//   if (leftPicModal.style.display === "") {
+//     leftPicModal.src = "";
+//     leftPicModal.innerHTML = "HELLO"
+//   }
 
-leftPicModal.addEventListener("mouseout", async () => {
 
-  if (leftPicModal.style.display === "") {
-    leftPicModal.src = "https://thumbor.forbes.com/thumbor/711x473/https://blogs-images.forbes.com/robisbitts2/files/2019/03/StockMarket.jpg?width=960";
-    leftPicModal.innerHTML = "HELLO"
-  }
-})
+// })
 
-middlePicModal.addEventListener("mouseenter", async () => {
 
-  if (middlePicModal.style.display === "") {
-    middlePicModal.src = "";
-    middlePicModal.innerHTML = "HELLO"
-  }
-})
 
-middlePicModal.addEventListener("mouseout", async () => {
 
-  if (middlePicModal.style.display === "") {
-    middlePicModal.src = "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/38478585_1922339777809531_8134470769301258240_n.png?_nc_cat=111&_nc_oc=AQnsJ8ZtZ1Eb7aMsGAIH4SAGWCvORtz-iDX8TR2gJU_0mzvxUsOVBDNjIqlpIC7_d7Q&_nc_ht=scontent-lga3-1.xx&oh=c0014b35b26e9ef37e0d54202bf5875c&oe=5E302993";
-    middlePicModal.innerHTML = "HELLO"
-  }
-})
 
-rightPicModal.addEventListener("mouseenter", async () => {
+// // leftPicModal.addEventListener("mouseout", async () => {
 
-  if (rightPicModal.style.display === "") {
-    rightPicModal.src = ""
-    // rightPicModal.alt = ""
-    rightPicModal.innerHTML = "HELLO"
-  }
-})
+// //   if (leftPicModal.style.display === "") {
+// //     leftPicModal.src = "https://thumbor.forbes.com/thumbor/711x473/https://blogs-images.forbes.com/robisbitts2/files/2019/03/StockMarket.jpg?width=960";
+// //     leftPicModal.innerHTML = "HELLO"
+// //   }
+// // })
 
-rightPicModal.addEventListener("mouseout", async () => {
+// middlePicModal.addEventListener("mouseenter", async () => {
 
-  if (rightPicModal.style.display === "") {
-    rightPicModal.src = "https://thumbor.forbes.com/thumbor/711x473/https://blogs-images.forbes.com/robisbitts2/files/2019/03/StockMarket.jpg?width=960";
-    rightPicModal.innerHTML = "HELLO"
-  }
-})
+//   if (middlePicModal.style.display === "") {
+//     middlePicModal.src = "";
+//     middlePicModal.innerHTML = "HELLO"
+//   }
+// })
+
+// middlePicModal.addEventListener("mouseout", async () => {
+
+//   if (middlePicModal.style.display === "") {
+//     middlePicModal.src = "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/38478585_1922339777809531_8134470769301258240_n.png?_nc_cat=111&_nc_oc=AQnsJ8ZtZ1Eb7aMsGAIH4SAGWCvORtz-iDX8TR2gJU_0mzvxUsOVBDNjIqlpIC7_d7Q&_nc_ht=scontent-lga3-1.xx&oh=c0014b35b26e9ef37e0d54202bf5875c&oe=5E302993";
+//     middlePicModal.innerHTML = "HELLO"
+//   }
+// })
+
+// rightPicModal.addEventListener("mouseenter", async () => {
+
+//   if (rightPicModal.style.display === "") {
+//     rightPicModal.src = ""
+//     // rightPicModal.alt = ""
+//     rightPicModal.innerHTML = "HELLO"
+//   }
+// })
+
+// rightPicModal.addEventListener("mouseout", async () => {
+
+//   if (rightPicModal.style.display === "") {
+//     rightPicModal.src = "https://thumbor.forbes.com/thumbor/711x473/https://blogs-images.forbes.com/robisbitts2/files/2019/03/StockMarket.jpg?width=960";
+//     rightPicModal.innerHTML = "HELLO"
+//   }
+// })
 
 // STOCK ATTRIBUTE NOTES 
 
