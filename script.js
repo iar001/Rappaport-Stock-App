@@ -53,10 +53,12 @@ buttonRandom.addEventListener("click", async () => {
   let randomStockTwo = randomStock(sp500);
   let response1 = await axios.get(`https://cloud.iexapis.com/stable/stock/${randomStockOne}/quote?token=${apikey}`);
   let response2 = await axios.get(`https://cloud.iexapis.com/stable/stock/${randomStockTwo}/quote?token=${apikey}`);
+  let logo1 = await axios.get(`https://cloud.iexapis.com/stable/stock/${randomStockOne}/logo?token=${apikey}`);
+  let logo2 = await axios.get(`https://cloud.iexapis.com/stable/stock/${randomStockTwo}/logo?token=${apikey}`);
   console.log(response1)
   console.log(randomStockOne)
-  renderstock1(response1)
-  renderstock2(response2)
+  renderstock1(response1,logo1)
+  renderstock2(response2,logo2)
   compareStocks(response1, response2)
 })
 
@@ -99,11 +101,11 @@ const renderstock1 = (information,picture) => {
     `<p> ${information.data.companyName}</p>
     <p>${information.data.symbol}</p>
     <p> ${information.data.previousClose}</p>
-    <p>${information.data.ytdChange} %</p>
+    <p>${information.data.ytdChange.toFixed(2)}%</p>
     <p>${information.data.peRatio}</p>
-    <p>${information.data.marketCap}</p>
-    <p>${information.data.changePercent}</p>
-    <img src=${picture.data.url} alt="hello">
+    <p>$${information.data.marketCap/1000000000} billion</p>
+    <p>${information.data.changePercent*100}%</p>
+    <img src=${picture.data.url} style="width:50px;height:50px" alt="hello">
     
     
 
@@ -119,11 +121,11 @@ const renderstock2 = (information,picture) => {
     `<p> ${information.data.companyName}</p>
     <p>${information.data.symbol}</p>
     <p>${information.data.previousClose}</p>
-    <p>${information.data.ytdChange} %</p>
+    <p>${information.data.ytdChange.toFixed(2)}%</p>
     <p>${information.data.peRatio}</p>
-    <p>${information.data.marketCap}</p>
-    <p>${information.data.changePercent}</p>
-    <img src=${picture.data.url} alt="hello">
+    <p>$${information.data.marketCap/1000000000} billion</p>
+    <p>${information.data.changePercent*100}%</p>
+    <img src=${picture.data.url} style="width:50px;height:50px" alt="hello">
     
     `
   stockResult2.append(element)

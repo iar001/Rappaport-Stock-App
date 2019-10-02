@@ -84,7 +84,7 @@ img {
 .stock-comparison {
   display: flex;
   justify-content: space-between;
-  height: 350px;
+  height: 650px;
   /* width: 100%; */
   border: 5px double #1C6EA4;
 
