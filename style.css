@@ -37,6 +37,11 @@ img {
   width: 15%;
 }
 
+#left-modal {
+  color: green;
+  font-size: 25px;
+}
+
 #wizard:hover {
  /* font-family: cursive;
  overflow: auto; */
@@ -54,8 +59,9 @@ img {
 }
 
 .stock-result {
-  display: ;
-  
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-column-gap: 5%;
 }
 
 #vid-gallery {

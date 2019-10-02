@@ -266,7 +266,7 @@ const rightPicModal = document.querySelector("#right-modal");
 
 
 leftPicModal.addEventListener("mouseenter", async () => {
-
+  
   if (leftPicModal.style.display === "") {
     leftPicModal.src = "";
     leftPicModal.innerHTML = "HELLO"
