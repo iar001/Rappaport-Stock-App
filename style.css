@@ -11,7 +11,7 @@ header {
   position: fixed;
   top: 0;
   z-index: 1;
-  background: linear-gradient(to right, white, lightgreen);
+  background: linear-gradient(to right, white, #26d0ce);
   justify-content: space-between;
 
 }
@@ -73,6 +73,7 @@ img {
   grid-column-gap: 5%;
 }
 
+
 #vid-gallery {
   display: flex;
   background: linear-gradient(to right, white, lightgreen);
@@ -104,9 +105,10 @@ img {
 .stock-comparison {
   display: flex;
   justify-content: space-between;
-  height: 450px;
+  height: 400px;
   /* width: 100%; */
   border: 5px double #1C6EA4;
+  background: linear-gradient(to right, white, lightgreen);
 
 }
 
@@ -228,6 +230,7 @@ and (-webkit-device-pixel-ratio : 3) {
 
   .stock-comparison {
     font-size: 10px;
+    background: linear-gradient(to right, white, lightgreen);
 
   }
 
