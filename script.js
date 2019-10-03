@@ -341,10 +341,10 @@ buttonPrice.addEventListener("click", async () => {
   if (response.data.peRatio < pricer && response.data.peRatio > 0) {
     renderstock3(response, logo, company)
   } else {
-    let element = document.createElement("div");
-    element.classList.add("stock-result");
-    element.innerHTML = "<p>TRY AGAIN</p>"
-    userInput.append(element)
+    // let element = document.createElement("div");
+    // element.classList.add("stock-result");
+    // element.innerHTML = "<p>TRY AGAIN</p>"
+    // userInput.append(element)
   }
 
 

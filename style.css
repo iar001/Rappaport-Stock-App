@@ -15,6 +15,9 @@ header {
   justify-content: space-between;
 
 }
+#iphone {
+  display: none;
+}
 
 body {
   margin: 0;
@@ -35,6 +38,7 @@ main {
 img {
   height: 250px;
   width: 100%;
+  justify-items: center;
 }
 
 /* #left-modal {
@@ -53,6 +57,10 @@ img {
 .stock-info {
  font-family: Arial, Helvetica, sans-serif;
  
+}
+
+.comparison {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .stock-info2 {
@@ -137,7 +145,7 @@ small {
   margin: 10px auto;
   width: 50%;
   height: 250px;
-  z-index: 1;
+  /* z-index: 1;  this faded out to prevent pictures from staying on screen as you scroll */
 }
 #f1_container {
   perspective: 1000;
@@ -146,6 +154,7 @@ small {
   width: 50%;
   height: 50%;
   transform-style: preserve-3d;
+
   transition: all 1.0s linear;
 }
 #f1_container:hover #f1_card {
@@ -166,4 +175,43 @@ small {
   color: white;
   text-align: center;
   background-color: #aaa;
+}
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3) {
+
+  main {
+    margin-top: 35%;
+  }
+
+  #desktop {
+    display: none;
+  }
+
+  #iphone {
+    display: block;
+  }
+
+  .stock-comparison {
+    font-size: 10px;
+
+  }
+
+  .stock-result {
+    /* grid-template-columns: 40% 40%; */
+
+  }
+
+  button {
+    background-color: #1C6EA4;
+  }
+}
+
+#f1_card {
+  height: 50%;
+  transform-style: preserve-3d;
+  transiton: all 1.0s linear;
+  width: 100%;
 }
