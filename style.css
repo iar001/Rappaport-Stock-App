@@ -154,9 +154,9 @@ small {
   width: 50%;
   height: 50%;
   transform-style: preserve-3d;
-
   transition: all 1.0s linear;
 }
+
 #f1_container:hover #f1_card {
   transform: rotateY(180deg);
   box-shadow: -5px 5px 5px #aaa;
@@ -207,11 +207,11 @@ and (-webkit-device-pixel-ratio : 3) {
   button {
     background-color: #1C6EA4;
   }
+  #f1_card {
+    height: 75%;
+    transform-style: preserve-3d;
+    transition: all 1.0s linear;
+    width: 100%;
+  }
 }
 
-#f1_card {
-  height: 50%;
-  transform-style: preserve-3d;
-  transiton: all 1.0s linear;
-  width: 100%;
-}

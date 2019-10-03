@@ -17,31 +17,31 @@ let compareResult = document.querySelector(".comparison")
 const buttonRandom = document.querySelector("#search4");
 const clearButton = document.querySelector("#search5");
 
-clearButton.addEventListener("click", async () => {
-  let stockOneInfo = document.querySelector("body > main > div.stock-comparison > section.stock-info > div.stock-info");
-  stockOneInfo.innerHTML = "";
-  let stockTwoInfo = document.querySelector("body > main > div.stock-comparison > section.stock-info2 > div.stock-info2");
-  stockTwoInfo.innerHTML = "";
+// clearButton.addEventListener("click", async () => {
+//   let stockOneInfo = document.querySelector("body > main > div.stock-comparison > section.stock-info > div.stock-info");
+//   stockOneInfo.innerHTML = "";
+//   let stockTwoInfo = document.querySelector("body > main > div.stock-comparison > section.stock-info2 > div.stock-info2");
+//   stockTwoInfo.innerHTML = "";
 
-  let comparisonInfo1 = document.querySelector("body > main > div > section.comparison > div:nth-child(2)");
-  comparisonInfo1.innerHTML = ""
+//   let comparisonInfo1 = document.querySelector("body > main > div > section.comparison > div:nth-child(2)");
+//   comparisonInfo1.innerHTML = ""
 
-  let comparisonInfo2 = document.querySelector("body > main > div > section.comparison > div:nth-child(3)");
-  comparisonInfo2.innerHTML = "";
+//   let comparisonInfo2 = document.querySelector("body > main > div > section.comparison > div:nth-child(3)");
+//   comparisonInfo2.innerHTML = "";
 
-  let comparisonInfo3 = document.querySelector("body > main > div > section.comparison > div:nth-child(4)");
-  comparisonInfo3.innerHTML = "";
+//   let comparisonInfo3 = document.querySelector("body > main > div > section.comparison > div:nth-child(4)");
+//   comparisonInfo3.innerHTML = "";
 
-  let comparisonInfo4 = document.querySelector("body > main > div > section.comparison > div:nth-child(5)");
-  comparisonInfo4.innerHTML = "";
+//   let comparisonInfo4 = document.querySelector("body > main > div > section.comparison > div:nth-child(5)");
+//   comparisonInfo4.innerHTML = "";
 
-  let comparisonInfo5 = document.querySelector("body > main > div > section.comparison > div:nth-child(6)");
-  comparisonInfo5.innerHTML = "";
+//   let comparisonInfo5 = document.querySelector("body > main > div > section.comparison > div:nth-child(6)");
+//   comparisonInfo5.innerHTML = "";
 
-  let comparisonInfo6 = document.querySelector("body > main > div > section.comparison > div:nth-child(7)");
-  comparisonInfo6.innerHTML = "";
-});
-
+//   let comparisonInfo6 = document.querySelector("body > main > div > section.comparison > div:nth-child(7)");
+//   comparisonInfo6.innerHTML = "";
+// });
+// clearButton.addEventListener("click",document.location.reload())
 
 const randomStock = (array) => {
   let randomNumber = Math.floor(Math.random() * array.length);
@@ -108,8 +108,8 @@ const renderstock1 = (information, picture, company) => {
     <p>Price: ${information.data.previousClose}</p>
     <p>Year to Date Move: ${information.data.ytdChange.toFixed(2)}%</p>
     <p>PE Ratio: ${information.data.peRatio}</p>
-    <p>Market Cap: $${information.data.marketCap / 1000000000} billion</p>
-    <p>Yesterday's Change: ${information.data.changePercent * 100}%</p>
+    <p>Market Cap: $${(information.data.marketCap / 1000000000).toFixed(2)} billion</p>
+    <p>Yesterday's Change: ${(information.data.changePercent * 100).toFixed(2)}%</p>
     <img src=${picture.data.url} style="width:50px;height:50px" alt="hello">
     <br>
     <a href="${company.data.website}" target="_blank">Company Website</a>
@@ -130,8 +130,8 @@ const renderstock2 = (information, picture, company) => {
     <p>Price: ${information.data.previousClose}</p>
     <p>Year to Date Move: ${information.data.ytdChange.toFixed(2)}%</p>
     <p>PE Ratio: ${information.data.peRatio}</p>
-    <p>Market Cap: $${information.data.marketCap / 1000000000} billion</p>
-    <p>Yesterday's Change: ${information.data.changePercent * 100}%</p>
+    <p>Market Cap: $${(information.data.marketCap / 1000000000).toFixed(2)} billion</p>
+    <p>Yesterday's Change: ${(information.data.changePercent * 100).toFixed(2)}%</p>
     <img src=${picture.data.url} style="width:50px;height:50px" alt="hello">
     <br>
     <a href="${company.data.website}" target="_blank">Company Website</a>
