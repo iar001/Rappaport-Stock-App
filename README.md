@@ -1,6 +1,6 @@
 Ian's Stock App
 
-Using HTML, CSS, and Javascrapt, this site is built for new investors who want to find a bit of information about publicly traded companies. With nothing more than a stock symbol, the app displays some of the most important information needed to analyze companies, and has the functionatliy to compare two different investments as well.  The app uses the companies performance and profitability to make recommencations on which stock to invest in. Additionally, the PE Ratio wizard allows the user to find companies that fit within their desired PE Ratio with the simple click of a button.  The last major function of the website is the randomizer, which iterates through SP500 companies, and compares two random ones.
+Using HTML, CSS, and Javascrapt, this site is built for new investors who want to find a bit of information about publicly traded companies. With nothing more than a stock symbol, the app displays some of the most important information needed to analyze companies, and has the functionatliy to compare two different investments as well.  The app uses the firms performance and profitability to make recommencations on which stock to invest in. Additionally, the PE Ratio wizard allows the user to find companies that fit within their desired PE Ratio with the simple click of a button.  The last major function of the website is the randomizer, which iterates through SP500 companies, and compares two random ones.
 
 Technologies Used
 
