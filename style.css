@@ -160,8 +160,11 @@ img {
     height: 450px;
     /* width: 100%; */
     border: 5px double #1C6EA4;
+    background: linear-gradient(to right, white, lightgreen);
   
   }
+
+  
 
 
 footer {
