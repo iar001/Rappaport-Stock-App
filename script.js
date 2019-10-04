@@ -53,6 +53,8 @@ buttonCompare.addEventListener("click", async () => {
   compareStocks(response1, response2)
 })
 
+// Company One Event Listener 
+
 button1.addEventListener("click", async () => {
   let stockInfo = stockInput1.value;
   let response = await axios.get(`https://cloud.iexapis.com/stable/stock/${stockInfo}/quote?token=${apikey}`);
@@ -64,6 +66,8 @@ button1.addEventListener("click", async () => {
   renderstock1(response, logo, company);
 })
 
+// Company Two Event Listener 
+
 button2.addEventListener("click", async () => {
   let stockInfo = stockInput2.value;
   let response = await axios.get(`https://cloud.iexapis.com/stable/stock/${stockInfo}/quote?token=${apikey}`);
@@ -71,10 +75,11 @@ button2.addEventListener("click", async () => {
   let company = await axios.get(`https://cloud.iexapis.com/stable/stock/${stockInfo}/company?token=${apikey}`)
   console.log(response);
   console.log(response.data.symbol)
+  console.log(company)
   renderstock2(response, logo, company)
 })
 
-// Company1 Event Listener 
+// Company 1 Function 
 
 const renderstock1 = (information, picture, company) => {
   let element = document.createElement("div");
@@ -94,6 +99,8 @@ const renderstock1 = (information, picture, company) => {
     `
   stockResult1.append(element)
 }
+
+// Company 2 Function 
 
 const renderstock2 = (information, picture, company) => {
   // let peRatio2 = information.data.peRatio;
@@ -115,6 +122,8 @@ const renderstock2 = (information, picture, company) => {
   stockResult2.append(element)
 }
 
+// Compare Function 
+
 const compareStocks = (stock1, stock2) => {
   let closingPrice1 = stock1.data.previousClose;
   let closingPrice2 = stock2.data.previousClose;
@@ -135,7 +144,7 @@ const compareStocks = (stock1, stock2) => {
     let element = document.createElement("div");
     element.classList.add("comparison");
     element.innerHTML = `
-    <p>Names of the Companies</p>
+    <p>Company Name</p>
     <p>Stock Symbol</p>
     <p>Price Winner: ${stock1.data.symbol}</p>`
     compareResult.append(element)
@@ -144,7 +153,7 @@ const compareStocks = (stock1, stock2) => {
     let element = document.createElement("div")
     element.classList.add("comparison");
     element.innerHTML = `
-    <p>Names of the Companies</p>
+    <p>Company Name</p>
     <p>Stock Symbol</p>
     <p>Price Winner: ${stock2.data.symbol}</p>`
     compareResult.append(element)
@@ -260,8 +269,7 @@ buttonPrice.addEventListener("click", async () => {
   }
 })
 
-
-
+// PE Ratio Function 
 
 const renderstock3 = (information, picture, company) => {
   let element = document.createElement("div");

@@ -6,9 +6,9 @@ Technologies Used
 
 I used the IEX API in many capacities in the making of this site.  Different API links found different information necessary for the app's functionality.  For example, company logo's, websites, and financial data were all located within different API links.  
 
-One of the more difficult aspects of the project was comparing data from the two company API requests.  This was needed to create the stock remmendation functionality.  I needed to pull API information for two companies, then compare the data.  I used a counter method for the five different categories, and whichever came out in the lead was the recommended stock.
+One of the more difficult aspects of the project was comparing data from the two company API requests.  This was needed to create the stock remmendation functionality.  I needed to pull API information for two companies, then compare the data.  I used a counter method for the five different categories, and whichever company came out in the lead was the recommended stock.
 
-Another difficult problem was iterating through a large array of stocks in order to find firms that hit certain characteristics.  I realized iterating through 500+ names for every request would eventually max my API limit, so instead used an alert to notify the user to make another request.  
+Another difficult problem was iterating through a large array of stocks in order to find firms that hit certain characteristics.  I realized iterating through 500+ names for every request would eventually max my API limit, so instead looked at one company at a time and used an alert to notify the user to make another request if the company didn't fit. 
 
 Unsolved Problems
 
