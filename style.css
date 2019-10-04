@@ -51,6 +51,7 @@ img {
  /* font-family: cursive;
  overflow: auto; */
  text-shadow:1px 0px #555;
+ 
 
 }
 .flip-card {
@@ -236,7 +237,7 @@ text-transform: uppercase;
 text-decoration: none;
 background: lightseagreen;
 padding: 10px;
-border-radius: 5px;
+border-radius: 10px;
 display: inline-block;
 border: none;
 transition: all 0.4s ease 0s;
@@ -284,18 +285,15 @@ and (-webkit-device-pixel-ratio : 3) {
 
   }
 
-  .stock-result {
-    /* grid-template-columns: 40% 40%; */
-
+  .flip-card {
+    width: auto;
   }
 
   button {
     background-color: #1C6EA4;
   }
   
-  /* .section2 {
-    display: block;
-  } */
+  
 
   .pics {
     display: list-item;
