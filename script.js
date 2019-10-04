@@ -88,7 +88,7 @@ const renderstock1 = (information, picture, company) => {
     `<p> ${information.data.companyName}</p>
     <p>${information.data.symbol}</p>
     <p>Price: ${information.data.previousClose}</p>
-    <p>Year to Date Move: ${information.data.ytdChange.toFixed(2)}%</p>
+    <p>Year to Date Move: ${(information.data.ytdChange * 100).toFixed(2)}%</p>
     <p>PE Ratio: ${information.data.peRatio}</p>
     <p>Market Cap: $${(information.data.marketCap / 1000000000).toFixed(2)} billion</p>
     <p>Yesterday's Change: ${(information.data.changePercent * 100).toFixed(2)}%</p>
@@ -110,7 +110,7 @@ const renderstock2 = (information, picture, company) => {
     `<p> ${information.data.companyName}</p>
     <p>${information.data.symbol}</p>
     <p>Price: ${information.data.previousClose}</p>
-    <p>Year to Date Move: ${information.data.ytdChange.toFixed(2)}%</p>
+    <p>Year to Date Move: ${(information.data.ytdChange * 100).toFixed(2)}%</p>
     <p>PE Ratio: ${information.data.peRatio}</p>
     <p>Market Cap: $${(information.data.marketCap / 1000000000).toFixed(2)} billion</p>
     <p>Yesterday's Change: ${(information.data.changePercent * 100).toFixed(2)}%</p>
@@ -268,6 +268,8 @@ buttonPrice.addEventListener("click", async () => {
     window.alert(`${response.data.companyName} has a higher PE Ratio than ${pricer}.  Try Again`)
   }
 })
+
+
 
 // PE Ratio Function 
 
