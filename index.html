@@ -12,21 +12,23 @@
 </head>
 
 <body>
-
+  
   <header>
 
-    <a href="#hello">
-      <h1 id="home">Stock App</h1>
-    </a>
+      <a href="#hello">
+        <h1 id="home"> Ian's Stock Wizard</h1>
+      </a>
 
-    <div id="bla">
+
+
+    <!-- <div id="bla">
       <p>Ian Rappaport</p>
-    </div>
+    </div> -->
 
-    <div class='rightSide'>
+    <!-- <div class='rightSide'>
 
-      <div>
-        <a href="#projects">
+      <div class="a">
+        <a href="#wizard">
           <p>Stock Picker Wizard</p>
         </a>
       </div>
@@ -37,7 +39,7 @@
         </a>
       </div>
 
-    </div>
+    </div> -->
 
   </header>
 
@@ -97,19 +99,19 @@
       <h1 id="wizard">Stock Picker Wizard</h1>
       <div class="search-section1">
         <div class="company-buttons">
-          <button id="search1">Company One</button>
-          <input type="text" name="fname" autofocus id="blank1" placeholder="Enter Stock Symbol">
-          <br></br>
-          <button id="search2">Company Two</button>
-          <input type="text" id="blank2" placeholder="Enter Stock Symbol">
-          <br></br>
+          <!-- <button id="search1">Company One</button>
+          <input type="text" name="fname" autofocus id="blank1" placeholder="Enter Stock Symbol"> -->
+          <!-- <br></br> -->
+          <!-- <button id="search2">Company Two</button>
+          <input type="text" id="blank2" placeholder="Enter Stock Symbol"> -->
+          <!-- <br></br> -->
           <!-- <button id="search3">Compare Stocks</button> -->
         </div>
 
         <br></br>
-        <button id="search4">Randomize</button>
+        <!-- <button id="search4">Randomize</button> -->
         <!-- <button id="search5">Clear</button> -->
-        <button onclick="location.reload();">Refresh</button>
+        <!-- <button onclick="location.reload();">Refresh</button> -->
         <br></br>
       </div>
     </section>
@@ -117,22 +119,27 @@
 
     <div class="stock-comparison">
       <section class="stock-info">
-        <h2>Company One</h2>
+        <button id="search1">Company One</button>
+        <input type="text" name="fname" autofocus id="blank1" placeholder="Enter Stock Symbol">
         <div></div>
       </section>
       <section class="comparison">
         <button id="search3">Compare Stocks</button>
+        <button onclick="location.reload();">Refresh</button>
+        <button id="search4">Randomize</button>
+
         <!-- <div></div> -->
       </section>
       <section class="stock-info2">
-        <h2>Company Two</h2>
+        <button id="search2">Company Two</button>
+        <input type="text" id="blank2" placeholder="Enter Stock Symbol">
         <div></div>
       </section>
     </div>
 
     <section>
       <div class="work-title">
-        <h2 id="desktop">The PE Ratio Wizard: Hover Over the Pictures to Understand His Powers</h2>
+        <h2 id="desktop">The PE Ratio Wizard: Hover Over the Pictures to Understand His Powers!</h2>
         <h2 id="iphone">The PE Ratio Wizard: Click On the Pictures to Understand His Powers!</h2>
       </div>
       <section class="pics">
@@ -178,8 +185,8 @@
     </section>
 
     <section class="stock-attributes">
-      <div>
-        <h2>Test It Out</h2>
+      <div class="pe">
+        <h2>PE Ratio Wizard</h2>
         <button id="price-button">See Your Stock</button>
         <input type="text" id="blank3" placeholder="Enter PE Ratio">
         <br></br>
