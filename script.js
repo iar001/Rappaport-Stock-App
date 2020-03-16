@@ -87,14 +87,18 @@ const renderstock1 = (information, picture, company) => {
   element.innerHTML =
     `<p> ${information.data.companyName}</p>
     <p>${information.data.symbol}</p>
-    <p>Price: ${information.data.previousClose}</p>
+    <p>Price: ${information.data.latestPrice}</p>
     <p>Year to Date Move: ${(information.data.ytdChange * 100).toFixed(2)}%</p>
     <p>PE Ratio: ${information.data.peRatio}</p>
     <p>Market Cap: $${(information.data.marketCap / 1000000000).toFixed(2)} billion</p>
     <p>Yesterday's Change: ${(information.data.changePercent * 100).toFixed(2)}%</p>
+    <div id="testing">
     <img src=${picture.data.url} style="width:50px;height:50px" alt="hello">
     <br>
     <a href="${company.data.website}" target="_blank">Company Website</a>
+    </div>
+
+    
     
     `
   stockResult1.append(element)
@@ -109,14 +113,16 @@ const renderstock2 = (information, picture, company) => {
   element.innerHTML =
     `<p> ${information.data.companyName}</p>
     <p>${information.data.symbol}</p>
-    <p>Price: ${information.data.previousClose}</p>
+    <p>Price: ${information.data.latestPrice}</p>
     <p>Year to Date Move: ${(information.data.ytdChange * 100).toFixed(2)}%</p>
     <p>PE Ratio: ${information.data.peRatio}</p>
     <p>Market Cap: $${(information.data.marketCap / 1000000000).toFixed(2)} billion</p>
     <p>Yesterday's Change: ${(information.data.changePercent * 100).toFixed(2)}%</p>
+    <div id="testing">
     <img src=${picture.data.url} style="width:50px;height:50px" alt="hello">
     <br>
     <a href="${company.data.website}" target="_blank">Company Website</a>
+    </div>
     
     `
   stockResult2.append(element)
@@ -230,12 +236,12 @@ const compareStocks = (stock1, stock2) => {
   if (company1 > company2) {
     let element = document.createElement("div");
     element.classList.add("comparison");
-    element.innerHTML = `<h2>YOU SHOULD BUY: ${stock1.data.symbol}</h2>`
+    element.innerHTML = `<h2>YOU SHOULD BUY: ${stock1.data.companyName}</h2>`
     compareResult.append(element)
   } else {
     let element = document.createElement("div");
     element.classList.add("comparison");
-    element.innerHTML = `<h2>YOU SHOULD BUY: ${stock2.data.symbol}</h2>`
+    element.innerHTML = `<h2>YOU SHOULD BUY: ${stock2.data.companyName}</h2>`
     compareResult.append(element)
   }
 }

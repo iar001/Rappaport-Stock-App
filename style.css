@@ -20,6 +20,8 @@ header {
 
 }
 /* TESTING */
+
+
 .header-basic-light{
 	padding: 20px 40px;
 	box-sizing:border-box;
@@ -150,7 +152,7 @@ header h1 {
   display: none;
 }
 
-#desktop {
+.work-title h2 {
   margin-bottom: 2vh;
   /* margin-top: 10vh; */
   /* top: -5%; */
@@ -164,15 +166,11 @@ header h1 {
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; 
   letter-spacing: .10em; /* Adjust as needed */
-
   animation: 
-    typing 3.5s steps(30, end),
-    blink-caret .5s step-end infinite;
+    typing 5.5s steps(30, end),
+    blink-caret .75s step-end infinite;
 }
-/* .work-title {
-  margin-top: 1vh;
-  margin-bottom: 1vh;
-} */
+
 
 .work-title {
   padding: 1vh;
@@ -180,6 +178,17 @@ header h1 {
 }
 body {
   margin: 0;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
 }
 
 
@@ -202,16 +211,6 @@ img {
   font-size: 25px;
   align-content: center;
 } */
-
-#wizard {
-  margin: 2vw;
-  text-align: center;
-}
-
-#wizard2 {
-  margin: 2vw;
-  text-align: center;
-}
 
 
 .flip-card {
@@ -278,6 +277,15 @@ img {
   margin-right: 2vw;
   margin-top: 2vh;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+#testing {
+  display: flex;
+  margin: auto;
+}
+
+#testing a {
+  margin: 2vh;
 }
 
 .stock-result {
