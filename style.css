@@ -76,6 +76,10 @@ header {
 	padding:6px 10px;
 }
 
+#sup h1 {
+  margin-left: 33vw;
+}
+
 /* Making the header responsive. */
 
 @media all and (max-width: 600px) {
