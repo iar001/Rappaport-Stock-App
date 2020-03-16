@@ -76,6 +76,7 @@ header h1 {
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; 
   letter-spacing: .10em; /* Adjust as needed */
+
   animation: 
     typing 3.5s steps(30, end),
     blink-caret .5s step-end infinite;
@@ -350,7 +351,11 @@ and (max-device-width : 812px)
 and (-webkit-device-pixel-ratio : 3) {
 
   main {
-    margin-top: 35%;
+    /* margin-top: 35%; */
+  }
+
+  .rightSide {
+    margin-right: 0;
   }
 
   #desktop {
