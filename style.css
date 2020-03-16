@@ -33,10 +33,11 @@ header h1 {
 
 #home {
   display: flex;
-  font-size: 2em;
   justify-content: space-evenly;
+  font-weight: bold;
   /* margin-right: 55px; */
-/x  /* margin: 55px; */
+  font-weight: bold;
+  /* margin: 55px; */
   cursor: pointer;
   opacity: .7;
 }
@@ -62,11 +63,32 @@ header h1 {
 }
 
 #desktop {
-
+  margin-bottom: 2vh;
   /* margin-top: 10vh; */
-  margin-left: 2vw;
+  /* top: -5%; */
+  /* left: 25%; */
+  z-index: 1;
+  position: absolute;
+  color: black;
+  font-family: monospace; /* Web-safe typewriter-like font */
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; 
+  letter-spacing: .10em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
 }
+/* .work-title {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+} */
 
+.work-title {
+  padding: 1vh;
+  margin-left: 1.5vw;
+}
 body {
   margin: 0;
 }
