@@ -260,7 +260,7 @@ img {
 .stock-info {
   margin-left: 2vw;
   margin-top: 2vh;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif
  
 }
 .search-section1 {
@@ -268,15 +268,20 @@ img {
   display: center;
 }
 
+.overall-comparison {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 2vh;
+}
 .comparison {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
   margin-top: 2vh;
 }
 
 .stock-info2 {
   margin-right: 2vw;
   margin-top: 2vh;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #testing {
@@ -290,8 +295,10 @@ img {
 
 .stock-result {
   display: grid;
+  align-items: center;
   grid-template-columns: 30% 30% 30%;
   grid-column-gap: 5%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #vid-gallery {
@@ -357,6 +364,7 @@ footer {
 #contact {
   text-align: center;
   padding-bottom: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 small {

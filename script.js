@@ -87,7 +87,7 @@ const renderstock1 = (information, picture, company) => {
   element.innerHTML =
     `<p> ${information.data.companyName}</p>
     <p>${information.data.symbol}</p>
-    <p>Price: ${information.data.latestPrice}</p>
+    <p>Price: ${(information.data.latestPrice).toFixed(2)}</p>
     <p>Year to Date Move: ${(information.data.ytdChange * 100).toFixed(2)}%</p>
     <p>PE Ratio: ${information.data.peRatio}</p>
     <p>Market Cap: $${(information.data.marketCap / 1000000000).toFixed(2)} billion</p>
@@ -113,7 +113,7 @@ const renderstock2 = (information, picture, company) => {
   element.innerHTML =
     `<p> ${information.data.companyName}</p>
     <p>${information.data.symbol}</p>
-    <p>Price: ${information.data.latestPrice}</p>
+    <p>Price: ${(information.data.latestPrice).toFixed(2)}</p>
     <p>Year to Date Move: ${(information.data.ytdChange * 100).toFixed(2)}%</p>
     <p>PE Ratio: ${information.data.peRatio}</p>
     <p>Market Cap: $${(information.data.marketCap / 1000000000).toFixed(2)} billion</p>
@@ -131,6 +131,8 @@ const renderstock2 = (information, picture, company) => {
 // Compare Function 
 
 const compareStocks = (stock1, stock2) => {
+
+  
   let closingPrice1 = stock1.data.previousClose;
   let closingPrice2 = stock2.data.previousClose;
   let ytdChange1 = stock1.data.ytdChange;
@@ -143,6 +145,10 @@ const compareStocks = (stock1, stock2) => {
   let dailyChange2 = stock2.data.changePercent;
   let company1 = 0;
   let company2 = 0;
+
+  
+ 
+
   let element = document.createElement("div");
   element.classList.add("comparison");
   if (closingPrice1 > closingPrice2) {
@@ -285,7 +291,6 @@ const renderstock3 = (information, picture, company) => {
   element.innerHTML =
     `<p> ${information.data.companyName}</p>
     <img src=${picture.data.url} style="width:50px;height:50px" alt="hello">
-    <br>
     <a href="${company.data.website}" target="_blank">Company Website</a>
     `
   userInput.append(element)
