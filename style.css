@@ -152,7 +152,7 @@ header h1 {
   display: none;
 }
 
-.work-title h2 {
+.work-title h3 {
   margin-bottom: 2vh;
   /* margin-top: 10vh; */
   /* top: -5%; */
@@ -194,6 +194,7 @@ body {
 
 main {
   background: linear-gradient(to right, white, lightblue);
+  /* background: white */
 }
 .section2 {
   display: flex;
@@ -212,7 +213,12 @@ img {
   align-content: center;
 } */
 
+.top-of-page {
+  display: flex;
+  justify-content: space-between;
+  margin: 2vw;
 
+}
 .flip-card {
   background-color: transparent;
   width: 300px;
@@ -227,7 +233,9 @@ img {
   text-align: center;
   transition: transform 1.0s;
   transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+  box-shadow: 8px 8px 8px 8px rgba(0,0,0,0.5);
+
 }
 
 .flip-card:hover .flip-card-inner {
@@ -257,8 +265,14 @@ img {
   justify-content: space-between;
   margin: 2vw;
 }
-.stock-info p {
+
+.stock-info {
+  margin-top:  2vh;
   margin-left: 2vw;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.stock-info p {
   margin-top: 2vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 
@@ -278,18 +292,36 @@ img {
   margin-top: 2vh;
 }
 
+.comparison-line {
+  /* display: flex; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  margin-top: 2vh;
+}
+
 .stock-info2 {
   margin-right: 2vw;
   margin-top: 2vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+
+
 #testing {
   display: flex;
   margin: auto;
 }
 
+#testing2 {
+  display: flex;
+  margin: auto;
+}
+
 #testing a {
+  margin: 2vh;
+}
+
+#testing2 a {
   margin: 2vh;
 }
 

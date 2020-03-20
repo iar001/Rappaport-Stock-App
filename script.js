@@ -118,7 +118,7 @@ const renderstock2 = (information, picture, company) => {
     <p>PE Ratio: ${information.data.peRatio}</p>
     <p>Market Cap: $${(information.data.marketCap / 1000000000).toFixed(2)} billion</p>
     <p>Yesterday's Change: ${(information.data.changePercent * 100).toFixed(2)}%</p>
-    <div id="testing">
+    <div id="testing2">
     <img src=${picture.data.url} style="width:50px;height:50px" alt="hello">
     <br>
     <a href="${company.data.website}" target="_blank">Company Website</a>
@@ -169,18 +169,18 @@ const compareStocks = (stock1, stock2) => {
     <p>Stock Symbol</p>
     <p>Price Winner: ${stock2.data.symbol}</p>`
     compareResult.append(element)
-  }
+  } 
 
   if (ytdChange1 > ytdChange2) {
     company1 += 1;
     let element = document.createElement("div");
-    element.classList.add("comparison");
+    element.classList.add("comparison-line");
     element.innerHTML = `<p>Performance Winner: ${stock1.data.symbol}</p>`
     compareResult.append(element)
   } else {
     company2 += 1;
     let element = document.createElement("div")
-    element.classList.add("comparison");
+    element.classList.add("comparison-line");
     element.innerHTML = `<p>Performance Winner: ${stock2.data.symbol}</p>`
     compareResult.append(element)
   }
@@ -188,39 +188,40 @@ const compareStocks = (stock1, stock2) => {
   if (peRatio1 < 0 && peRatio2 > 0) {
     company2 += 1;
     let element = document.createElement("div");
-    element.classList.add("comparison");
+    element.classList.add("comparison-line");
     element.innerHTML = `<p>PE Ratio Winner: ${stock2.data.symbol}</p>`
     compareResult.append(element)
   } else if (peRatio1 > 0 && peRatio2 < 0) {
     company1 += 1;
     let element = document.createElement("div");
-    element.classList.add("comparison");
+    element.classList.add("comparison-line");
     element.innerHTML = `<p>PE Ratio Winner: ${stock1.data.symbol}</p>`
     compareResult.append(element)
   } else if (peRatio1 > peRatio2) {
     company2 += 1;
     let element = document.createElement("div");
-    element.classList.add("comparison");
+    element.classList.add("comparison-line");
     element.innerHTML = `<p>PE Ratio Winner: ${stock2.data.symbol}</p>`
     compareResult.append(element)
   } else {
     company1 += 1;
     let element = document.createElement("div");
-    element.classList.add("comparison");
-    element.innerHTML = `<p>PE Ratio Winner: ${stock1.data.symbol}</p>`
+    element.classList.add("comparison-line");
+    element.innerHTML = `
+    <p>PE Ratio Winner: ${stock1.data.symbol}</p>`
     compareResult.append(element)
   }
 
   if (marketCap1 > marketCap2) {
     company1 += 1;
     let element = document.createElement("div");
-    element.classList.add("comparison");
+    element.classList.add("comparison-line");
     element.innerHTML = `<p>Which Company is Bigger?: ${stock1.data.symbol}</p>`
     compareResult.append(element)
   } else {
     company2 += 1;
     let element = document.createElement("div")
-    element.classList.add("comparison");
+    element.classList.add("comparison-line");
     element.innerHTML = `<p>Which Company is Bigger?: ${stock2.data.symbol}</p>`
     compareResult.append(element)
   }
@@ -228,25 +229,25 @@ const compareStocks = (stock1, stock2) => {
   if (dailyChange1 > dailyChange2) {
     company1 += 1;
     let element = document.createElement("div");
-    element.classList.add("comparison");
+    element.classList.add("comparison-line");
     element.innerHTML = `<p>Yesterday's Price Move: ${stock1.data.symbol}</p>`
     compareResult.append(element)
   } else {
     company2 += 1;
     let element = document.createElement("div")
-    element.classList.add("comparison");
+    element.classList.add("comparison-line");
     element.innerHTML = `<p>Yesterday's Price Move: ${stock2.data.symbol}</p>`
     compareResult.append(element)
   }
 
   if (company1 > company2) {
     let element = document.createElement("div");
-    element.classList.add("comparison");
+    element.classList.add("comparison-line");
     element.innerHTML = `<h2>BUY: ${stock1.data.companyName}</h2>`
     compareResult.append(element)
   } else {
     let element = document.createElement("div");
-    element.classList.add("comparison");
+    element.classList.add("comparison-line");
     element.innerHTML = `<h2>BUY: ${stock2.data.companyName}</h2>`
     compareResult.append(element)
   }
