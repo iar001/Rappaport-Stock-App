@@ -160,7 +160,7 @@ header h1 {
   z-index: 1;
   position: absolute;
   color: black;
-  font-family: monospace; /* Web-safe typewriter-like font */
+  font-family: Verdana, Geneva, Tahoma, sans-serif; /* Web-safe typewriter-like font */
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid orange; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
@@ -257,11 +257,11 @@ img {
   justify-content: space-between;
   margin: 2vw;
 }
-.stock-info {
+.stock-info p {
   margin-left: 2vw;
   margin-top: 2vh;
-  font-family: Verdana, Geneva, Tahoma, sans-serif
- 
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
 }
 .search-section1 {
   margin-left: 2vw;
