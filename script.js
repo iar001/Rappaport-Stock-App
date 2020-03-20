@@ -236,12 +236,12 @@ const compareStocks = (stock1, stock2) => {
   if (company1 > company2) {
     let element = document.createElement("div");
     element.classList.add("comparison");
-    element.innerHTML = `<h2>YOU SHOULD BUY: ${stock1.data.companyName}</h2>`
+    element.innerHTML = `<h2>BUY: ${stock1.data.companyName}</h2>`
     compareResult.append(element)
   } else {
     let element = document.createElement("div");
     element.classList.add("comparison");
-    element.innerHTML = `<h2>YOU SHOULD BUY: ${stock2.data.companyName}</h2>`
+    element.innerHTML = `<h2>BUY: ${stock2.data.companyName}</h2>`
     compareResult.append(element)
   }
 }
