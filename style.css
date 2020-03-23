@@ -78,9 +78,66 @@ header {
 	padding:6px 10px;
 }
 
-#sup h1 {
-  margin-left: 33vw;
+/* /////// */
+.header-basic-light2{
+	padding: 20px 40px;
+	box-sizing:border-box;
+	box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.15);
+	height: 80px;
+	background-color: #fff;
 }
+
+.header-basic-light2 .header-limiter2 {
+	max-width: 100%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+/* Logo */
+
+.header-basic-light2 .header-limiter2 h1{
+	/* float: left; */
+	font: normal 28px Cookie, Arial, Helvetica, sans-serif;
+	line-height: 40px;
+	margin: 0;
+}
+
+.header-basic-light2 .header-limiter2 h1 span {
+	color: #5383d3;
+}
+
+/* The header links */
+
+.header-basic-light2 .header-limiter2 a {
+	color: #5c616a;
+	text-decoration: none;
+}
+
+.header-basic-light2 .header-limiter2 nav{
+	font:15px Arial, Helvetica, sans-serif;
+	line-height: 40px;
+	float: right;
+}
+
+.header-basic-light2 .header-limiter2 nav a{
+	display: inline-block;
+	padding: 0 5px;
+	opacity: 0.9;
+	text-decoration:none;
+	color: #5c616a;
+	line-height:1;
+}
+
+.header-basic-light2 .header-limiter2 nav a.selected {
+	background-color: #86a3d5;
+	color: #ffffff;
+	border-radius: 3px;
+	padding:6px 10px;
+}
+
+/* #sup h1 {
+  margin-left: 33vw;
+} */
 
 /* Making the header responsive. */
 
